@@ -6,7 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
 public class ForEachEx {
 
@@ -17,8 +17,12 @@ public class ForEachEx {
 		//read all elements of a collection
 		//forEach(Consumer )
 		names.forEach(name -> System.out.println(name));
-		
+		System.out.println(".....................................");
 		names.forEach(System.out :: println);
+		
+		System.out.println(".....................................");
+		// using Consumer interface
+		names.forEach(new MyConsumer());
 		
 		System.out.println(".....................................");
 		// forEach with multi threaded
@@ -84,6 +88,17 @@ Key : G, Value : 7 Thread name : ForkJoinPool.commonPool-worker-3*/
 		linkedMap.put("G11", 7);
 		
 		linkedMap.forEach((k, v) -> System.out.println(k + "  " + v));
+	}	
+
+}
+
+class MyConsumer implements Consumer<String> {
+	
+	@Override
+	public void accept(String obj) {
+		System.out.println("Traversing using accept() " + obj);
 	}
 
+	
+	
 }

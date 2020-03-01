@@ -4,7 +4,7 @@ public class MethodReferenceEx01 {
 
 	public static void main(String[] args) {
 
-		//1st approach
+		//1st approach --anonymous class
 		Sayable ref01 = new Sayable() {
 			public void say() {
 				System.out.println("this is inner class implementation....");

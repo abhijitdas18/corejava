@@ -14,6 +14,13 @@ public class LambdaDemo
 		};
 		
 		System.out.println(sumIntr.sum(2, 6));
+		
+		SumInterface obj = (a, b) -> a + b;		
+		System.out.println("Sum : " + obj.sum(3, 6));
+		
+		SumInterface01 obj2 = (a, b) -> System.out.print(a*b);
+		obj2.mul(4, 5);
+		
 	}
 }
 
@@ -21,4 +28,9 @@ public class LambdaDemo
 interface SumInterface
 {
 	int sum(int a, int b);
+}
+
+interface SumInterface01
+{
+	void mul(int a, int b);
 }

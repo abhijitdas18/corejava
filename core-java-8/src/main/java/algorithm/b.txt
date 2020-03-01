@@ -1,0 +1,4 @@
+List<String> list = new ArrayList<String>(
+        Arrays.asList("Zzz...", "Two", "One", "Three")
+    );
+    Collections.sort(list.subList(1, list.size())); 

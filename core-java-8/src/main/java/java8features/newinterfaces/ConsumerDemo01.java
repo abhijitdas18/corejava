@@ -48,7 +48,7 @@ public class ConsumerDemo01 {
 	    	}			
 	    };
 		
-	    System.out.println("_______________3__________________________");
+	    System.out.println("\n_______________3__________________________");
 		numbers.forEach(cons01);
 		
 		Consumer <Integer> cons02 = (Integer b) -> {
@@ -56,22 +56,22 @@ public class ConsumerDemo01 {
 	    		System.out.println("Cube  :" + b *b*b);
 			};
 		};
-		System.out.println("_______________4__________________________");
+		System.out.println("\n_______________4__________________________");
 		numbers.forEach(cons02);
 		
-		System.out.println("_______________4__________________________");
+		System.out.println("\n_______________4__________________________");
 		Consumer <Integer> cons03 = b -> System.out.println(b);
 		numbers.forEach(cons03);
 		
-		System.out.println("_______________4__________________________");
+		System.out.println("\n_______________4__________________________");
 		numbers.forEach(x -> System.out.println(x));
 		//////////////////////////////////////
 		Consumer<Integer> cons04 =  new Consumer<Integer>() {
 			public void accept(Integer a) {
-				System.out.println("This is use of consumer : " + a );
+				System.out.print("This is use of consumer : " + a +" - ");
 			}
 		};
-		System.out.println("_______________5__________________________");
+		System.out.println("\n_______________5__________________________");
 		numbers.forEach(cons04);
 		
 		
@@ -80,7 +80,7 @@ public class ConsumerDemo01 {
 				System.out.println("This is implementation of consumer interface :" + i);
 			}
 		};
-		System.out.println("_______________6__________________________");
+		System.out.println("\n_______________6__________________________");
 		numbers.forEach(cons05);
 	}
 }
@@ -91,7 +91,7 @@ class ConsumerImpl implements Consumer<Integer>
 {
 	public void accept(Integer i)
 	{
-		System.out.println("value is  : " + i);
+		System.out.print("value is  : " + i +",");
 	}
 }
 

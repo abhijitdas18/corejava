@@ -1,5 +1,5 @@
 package java8features.stream;
-
+// mapToInt :
 import java.util.ArrayList;
 import java.util.List;
 // find the average age of the employee using map reduce of java 8
@@ -25,6 +25,10 @@ public class MapReduceForAverage {
 		
 		Double averageAge1 = emp.parallelStream().mapToInt(x->x.getAge()).average().getAsDouble();
 		System.out.println("Average age :" + averageAge1);
+
+		System.out.println("Using mapToInt");
+		emp.stream().mapToInt(x -> x.getAge()).forEach(x-> System.out.print(x + ","));
+		//alternate
 	}
 
 }

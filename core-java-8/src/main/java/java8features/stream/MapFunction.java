@@ -1,5 +1,7 @@
 package java8features.stream;
 // Convert a object into another object using map
+// map(Function func)   -- a function that accepts one argument and produces a result.
+// apply() is a method
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
@@ -36,7 +38,7 @@ public class MapFunction {
 
 
 }
-
+// a function that accepts one argument and produces a result.
 class MyFunction implements Function<Staff, StaffPublic>
 {
 	@Override

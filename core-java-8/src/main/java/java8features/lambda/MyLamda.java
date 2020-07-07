@@ -29,8 +29,12 @@ public class MyLamda {
 		names.add("aa3");
 		names.add("aa4");
 		
-		names.forEach(x -> System.out.println(x));			
-		
+		names.forEach(x -> System.out.println(x));
+
+
+		MyInterface01 mulResult = ( a, b) -> a * b;
+		System.out.println(mulResult.mul(2,7));
+
 	}
 
 }
@@ -47,4 +51,9 @@ interface MyInterface
 interface MyInter
 {
 	void goo();
+}
+
+interface MyInterface01
+{
+	int mul(int x, int y);
 }

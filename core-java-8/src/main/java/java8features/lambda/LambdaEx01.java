@@ -8,11 +8,11 @@ public class LambdaEx01 {
 
 	public static void main(String[] args) {
 
-		Arrays.asList("a","b","c").forEach(str -> System.out.println(str));
+		Arrays.asList("a","b","c").forEach(str -> System.out.print(str));
 		
 		String coma = ",";
 		Arrays.asList("a","b","c").forEach(
-				str -> System.out.println(str + coma)
+				str -> System.out.print(str + coma)
 				);	
 		
 	}

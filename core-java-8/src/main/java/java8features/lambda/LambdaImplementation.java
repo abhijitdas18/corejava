@@ -11,7 +11,7 @@ public class LambdaImplementation {
         
 		HelloInterface helloObjAnnoy = new A() {
 			public void hello() {
-				System.out.println("this is from annoymous inner class");
+				System.out.println("this is from anonymous inner class");
 			}
 		};
 		

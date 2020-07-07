@@ -11,8 +11,11 @@ public class LamdaEx1 {
 
 	public static void main(String[] args) {
 
-		List<Person> people = Arrays.asList(new Person("Charles", "Dickens", 60), new Person("Lewis", "Carroll", 42),
-				new Person("Thomas", "Carlyle", 51), new Person("Charlotte", "Bronte", 45),
+		List<Person> people = Arrays.asList(
+				new Person("Charles", "Dickens", 60),
+				new Person("Lewis", "Carroll", 42),
+				new Person("Thomas", "Carlyle", 51),
+				new Person("Charlotte", "Bronte", 45),
 				new Person("Matthew", "Arnold", 39));
 
 		System.out.println(people);
@@ -20,10 +23,13 @@ public class LamdaEx1 {
 		// Collections.sort(people, (p1, p2) ->
 		// p1.getLastName().compareTo(p2.getLastName()));
 		// sort(List<T> list, Comparator<? super T> c)
-		System.out.println("Lambda expression way...................");
+		System.out.println("Sorting by last NAME : Lambda expression way...................");
 		Collections.sort(people, (p1, p2) -> p1.getLastName().compareTo(p2.getLastName()));
 		System.out.println(people);
 
+		System.out.println("Sorting by first name:");
+		Collections.sort(people, (a1,a2) -> a1.getFirstName().compareTo(a2.getFirstName()));
+		System.out.println(people);
 		System.out.println("Conventional way...................");
 		ComparatorImpl obj = new ComparatorImpl();
 

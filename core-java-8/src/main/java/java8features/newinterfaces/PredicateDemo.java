@@ -15,9 +15,12 @@ public class PredicateDemo {
 		
 		
 		
-		List <Integer> 	nos = Arrays.asList(new Integer(1),new Integer(10),
-                new Integer(200),new Integer(101), 
-                new Integer(-10),new Integer(0));
+		List <Integer> 	nos = Arrays.asList(1,
+				10,
+				200,
+				101,
+				-10,
+				0);
 		
 		nos.forEach(x -> System.out.print(x + " " ) );
 		
@@ -28,10 +31,12 @@ public class PredicateDemo {
 		System.out.println("Negative :");
 		Predicate <Integer> negativePredicate = pre -> pre <0;
 		List<Integer> filterNo = filterNos(nos, negativePredicate);
-		filterNo.forEach(n -> System.out.print(n + " "));	
-		
-;
-		
+		filterNo.forEach(n -> System.out.print(n + " "));
+
+		System.out.println("Even :");
+		Predicate <Integer> evenPredicate = even -> (even % 2 == 0);
+		List<Integer> evenNo = filterNos(nos,evenPredicate);
+		System.out.println("Even list : "+ evenNo);
 	}
 	
 	public static List<Integer> filterNos(List<Integer> nos, Predicate<Integer> myPredicate)

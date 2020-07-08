@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Set;
 
 //Write a program to find out duplicate or repeated characters in a
-//string, and calculate the count of repeatation.
+//string, and calculate the count of repetition.
 public class DuplicateCharString {
 
 	public static void main(String[] args) {

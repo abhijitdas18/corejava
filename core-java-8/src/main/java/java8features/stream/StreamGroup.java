@@ -12,28 +12,31 @@ public class StreamGroup {
 		List<Fruit> items = Arrays.asList(
 				    new Fruit("apple",80.50f,  10 ),
 	                new Fruit("banana", 13.8f, 20),
-	                new Fruit("orang", 43.1f, 10),
+	                new Fruit("orange", 43.1f, 10),
 	                new Fruit("watermelon", 23.56f, 34),
 	                new Fruit("papaya",21.67f, 20 ),
 	                new Fruit("apple", 80.50f,10 ),
 	                new Fruit("banana", 13.8f, 8),
 	                new Fruit("banana", 13.8f, 28),
-	                new Fruit("orang", 43.1f, 15),
+	                new Fruit("orange", 43.1f, 15),
 	                new Fruit("watermelon", 23.56f, 34),
 	                new Fruit("apple",80.50f, 20)
 				);
 		
-		// counting the ouccerance of  each name  
-		Map<String, Long> counting =  items.stream().collect(Collectors.groupingBy(Fruit :: getName, Collectors.counting()));
+		// counting the occurrence of  each name
+		Map<String, Long> counting =  items.stream()
+				.collect(Collectors.groupingBy(Fruit :: getName, Collectors.counting()));
 		System.out.println("Count : " + counting);
 		
 		// sum of quantity for each group.
-		Map<String, Integer> sumOfQty = items.stream().collect(Collectors.groupingBy(Fruit:: getName, Collectors.summingInt(Fruit:: getQuantity)));
+		Map<String, Integer> sumOfQty = items.stream()
+				.collect(Collectors.groupingBy(Fruit:: getName, Collectors.summingInt(Fruit:: getQuantity)));
 		System.out.println("Sum of Qty :"+ sumOfQty);
 		
 		
-		//find the average qty  purachased for each item 
-		Map<String, Double> avgOfQty  = items.stream().collect(Collectors.groupingBy(Fruit::getName, Collectors.averagingInt(Fruit :: getQuantity)));
+		//find the average qty  purchased for each item
+		Map<String, Double> avgOfQty  = items.stream()
+				.collect(Collectors.groupingBy(Fruit::getName, Collectors.averagingInt(Fruit :: getQuantity)));
 		System.out.println("avgOfQty :" + avgOfQty);
 		
 		

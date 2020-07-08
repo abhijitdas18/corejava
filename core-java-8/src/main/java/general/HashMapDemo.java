@@ -11,7 +11,7 @@ public class HashMapDemo {
 		
 		map.put("a", 123);
 		map.put("b", 456);
-		System.out.println("Map 1 : "+  map); // [123, 456]
+		System.out.println("Map 1 : "+  map ); // [123, 456]
 		
 		map.put("a", 678);
 		
@@ -19,7 +19,9 @@ public class HashMapDemo {
 		
 		// Associates the specified value with the specified key in this map.
 		// If the map previously contained a mapping for the key, the old value is replaced.
-		System.out.println(map.put("a", 123)); // print 678, as this value was already associated with "a"
+		// put() return the previous value associated with key, or null if there was no mapping for key.
+		// (A null return can also indicate that the map previously associated null with key.)
+		System.out.println("Return of put() ::"+ map.put("a", 123)); // print 678, as this value was already associated with "a"
 		System.out.println(map); // [123, 456]
 		
 		System.out.println(map.put("c", 4567));  // null as no value was associated with "c"  

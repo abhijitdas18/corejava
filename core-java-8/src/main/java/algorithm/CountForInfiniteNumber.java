@@ -3,7 +3,7 @@ package algorithm;
 import java.util.HashMap;
 import java.util.Map;
 
-// Count the occurence of the each digit in an infinite numbers
+// Count the occurrences of the each digit in an infinite numbers
 // 123221244...456321034566....
 public class CountForInfiniteNumber {
 
@@ -13,7 +13,10 @@ public class CountForInfiniteNumber {
 		findOccurenceOfDigit(numbers);
 	}
 
-	// 
+	// public char[] toCharArray()
+	// the numeric value of the character, as a nonnegative int value; -2 if the character has a
+	// numeric value but the value can not be represented as a nonnegative int value;
+	// -1 if the character has no numeric value.
 	static void findOccurenceOfDigit(String number)
 	{
 		char [] ch = number.toCharArray();

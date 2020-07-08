@@ -31,7 +31,7 @@ public class SortArrayList {
 		Collections.sort(listOfCours, titleCompare);
 		System.out.println(listOfCours);
 		
-		// Using Annonmous class
+		// Using Anonymous class
 		Comparator<Course> com = new Comparator<Course>() {
 			@Override
 			public int compare(Course o1, Course o2) {
@@ -40,7 +40,7 @@ public class SortArrayList {
 			}
 		};
 		Collections.sort(listOfCours, com);
-		System.out.println("Using annonmous class : " + listOfCours);
+		System.out.println("Using anonymous class : " + listOfCours);
 		
 
 		// Sort by fee using comparator

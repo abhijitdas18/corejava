@@ -32,7 +32,7 @@ public class HashMapTravesing {
 		Iterator itr = set.iterator();
         while(itr.hasNext())
         {
-        	System.out.println(itr.next());
+        	System.out.print(itr.next() + ",");
         }
 		
 		
@@ -40,7 +40,7 @@ public class HashMapTravesing {
 		Set<Integer> rollSet = names.keySet();
 		for(Integer roll : rollSet)
 		{
-			System.out.println("roll : " + roll + "::::: Name :" + names.get(roll) );
+			System.out.print("roll : " + roll + "::::: Name :" + names.get(roll)  + ",");
 		}
 		
 		
@@ -57,7 +57,7 @@ public class HashMapTravesing {
 	
 		System.out.println("++++++++++++++++ Using java 8 +++++++++++++++");
 		names.forEach((k,v) -> {
-			System.out.println("roll : " + k + "::::: Name :" +v);
+			System.out.print("roll : " + k + "::::: Name :" +v + ",");
 		});
 		
 	}

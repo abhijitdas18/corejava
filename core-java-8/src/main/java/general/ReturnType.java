@@ -21,7 +21,7 @@ interface AAA
 }
 class A111 implements AAA
 {
-	public void f()  // access modfied must 
+	public void f()  // access modified must
 	{
 		
 	}

@@ -48,7 +48,9 @@ public class StreamDemo2 {
 		System.out.println("Emp : " + anEmp);
 		
 		System.out.println("Get a Male Employee01 whose age less than 20. NO record found" );
-		Optional <Employee01> anEmp20 = employees.stream().filter(x->x.getSex().equals("Male")).filter(x->x.getAge() < 20).findFirst();
+		Optional <Employee01> anEmp20 = employees.stream()
+				.filter(x->x.getSex().equals("Male"))
+				.filter(x->x.getAge() < 20).findFirst();
 		System.out.println("Emp : " + anEmp20);
 		if(anEmp20.isPresent())
 		{

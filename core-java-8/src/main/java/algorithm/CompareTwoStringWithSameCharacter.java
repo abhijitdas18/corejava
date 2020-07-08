@@ -2,8 +2,9 @@ package algorithm;
 
 import java.util.Arrays;
 
-//Two strings are called anagrams if they contain same set of characters but in different order. For example, “Dormitory – Dirty Room”,
-//“keep – peek”,  “School Master – The Classroom” are some anagrams.
+//Two strings are called anagrams if they contain same set of characters but in different order.
+// For example, ï¿½Dormitory ï¿½ Dirty Roomï¿½,
+//ï¿½keep ï¿½ peekï¿½,  ï¿½School Master ï¿½ The Classroomï¿½ are some anagrams.
 public class CompareTwoStringWithSameCharacter {
 
 	public static void main(String[] args) {

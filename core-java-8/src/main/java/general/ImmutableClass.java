@@ -9,7 +9,7 @@ public final class ImmutableClass {
 	private final  String immutableField2;
 	private final Date mutuableField;
 	
-	
+	//private constructor
 	private ImmutableClass(Integer immutableField1, String immutableField2, Date mutuableField) {
 		this.immutableField1 = immutableField1;
 		this.immutableField2 = immutableField2;

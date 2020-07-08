@@ -26,7 +26,7 @@ public class InstanceVariableOverride {
 		
 		System.out.println();
 		
-		//System.out.println(base.newVar);
+		//System.out.println(base.newVar); //Not accessible
 
 	}
 

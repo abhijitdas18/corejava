@@ -40,13 +40,13 @@ public class StreamEx01 {
 			System.out.println("Person above age 20 is " + anyPersonAbove20.get());
 		}
 		
-		Optional <Person> firstPersonAbove25 = persons.stream()
-		.filter(per -> per.getAge() >25)
+		Optional <Person> firstPersonAbove75 = persons.stream()
+		.filter(per -> per.getAge() >75)
 		.findFirst();
 		
-		if(firstPersonAbove25.isPresent())
+		if(firstPersonAbove75.isPresent())
 		{
-			System.out.println("Person above age 25 is " + firstPersonAbove25);
+			System.out.println("Person above age 25 is " + firstPersonAbove75);
 		}
         
 		
